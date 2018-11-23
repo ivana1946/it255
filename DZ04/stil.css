@@ -1,0 +1,31 @@
+body{background-color:white;}
+@my-color : #FF0000;
+
+.meni{list-style-type: none;
+    margin: 0;
+    padding: 0;
+	width:333px;}
+.meni li{float: left;}
+.meni li a{display: block;
+
+padding-left: 10px;
+padding-right: 10px;
+text-align: center;
+height: 50px;
+line-height: 50px;
+background-color: @my-color;
+color: white;
+
+font-size: 18px;
+font-weight: bold;
+
+}
+}
+#email{width:140px;}
+.prijava{text-align: center;
+font-size: 18px;
+font-weight: bold;
+color: red;}
+.naslov{font-size: 23px;
+color: red;
+font-weight: bold;}
