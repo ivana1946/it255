@@ -1,0 +1,81 @@
+<?php
+session_start();
+
+if(isset($_SESSION['prijavljen']) && $_SESSION['prijavljen']===true){
+	header('Location: index.html');
+	exit;
+}
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Registracija</title>
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<table align="center" width="900" border="1">
+<tr>
+<td colspan="2" align="center">
+ <img class="img-responsive img-portfolio img-hover" src="img/1.jpg" alt="">
+<ul class="meni"> 
+<li><a href="index.html">Početna</a></li>
+<li><a href="registracija.html">Registracija</a></li>
+
+</ul>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top"><p class="prijava">Prijava</p>
+<form method="POST" action="prijava.php">
+<label for="email">E-mail:</label>
+<input type="text" name="email" id="email">
+<br>
+<label for="sifra">Šifra:</label>
+<input type="password" name="sifra" id="sifra">
+<br>
+<div style="text-align:right;margin-right: 8px;"><input type="submit" name="prijava" value="Prijava"></div>
+</form>
+</td>
+<td valign="top">
+<form method="POST" action="registracija_post.php">
+<table align="center"><tr>
+<td colspan="2" align="center">
+<span class="naslov">Registracija</span>
+</td>
+</tr>
+<tr>
+<td>Ime: </td>
+<td><input type="text" name="ime"></td>
+</tr>
+<tr>
+<td>Prezime: </td>
+<td><input type="text" name="prezime"></td>
+</tr>
+<tr>
+<td>E-mail: </td>
+<td><input type="text" name="email"></td>
+</tr>
+<tr>
+<td>Šifra: </td>
+<td><input type="password" name="sifra"></td>
+</tr>
+<tr>
+<td>O sebi: </td>
+<td><textarea name="o_sebi"></textarea></td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Registruj">
+</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center"style ="color:red" >Ivana Stanković, 1946. </td>
+</tr>
+</table>
+</body>
+</html>
