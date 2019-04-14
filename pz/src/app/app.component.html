@@ -1,0 +1,62 @@
+<header>
+  <p><img src="1.png" alt=""></p>
+</header>
+<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <div class="container">
+          <a href="../" class="navbar-brand">Kablovski Operater</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+<li> <a href="../../home.html">Home</a>
+</li>
+              
+  <!--<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="./component/home/home.component.html" id="themes">Početna <span class="caret"></span></a>
+                </li>-->
+              
+              <li class="nav-item dropdown">
+                   
+                    <div class="dropdown-menu" aria-labelledby="themes">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="./component/paket/paket.component.html" id="themes">Kablovski paketi<span class="caret"></span></a></a>
+                      
+                    </div>
+                  </li>
+            <li>
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="./component/about/about.component.html" id="themes">O nama<span class="caret"></span></a></a>
+                </li>
+             
+          <!--
+              <li class="nav-item" *ngIf="isAuth && isAdmin">
+                  <a routerLink="users" >Prikaži korisnike</a>
+                </li>
+          
+                <li class="nav-item" *ngIf="isAuth && isAdmin">
+                  <a routerLink="updateUser">Izmeni korisnika</a>
+                </li>
+              
+-->
+              <li>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="./component/register/register.component.html" id="themes">Registracija <span class="caret"></span></a>
+                  </li>
+            </ul>
+  
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/login" routerLinkActive="active" >Prijava</a>
+              </li>
+
+              <li class="nav-item" *ngIf="isAuth">
+                  <a class="nav-link" (click)="logOut()">Odjavi se</a>
+                </li>
+            </ul>
+  
+          </div>
+        </div>
+      </div> 
+	  <router-outlet></router-outlet>
+	  
+      <footer>Ivana Stanković</footer>
+     
+    

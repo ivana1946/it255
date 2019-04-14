@@ -1,0 +1,32 @@
+<div class="container mt-5">
+        <div class="container">
+          <h2 class="text-dark text-center">Paketi Kablovskog Operatera</h2>
+          <table class="table" style="border: 1px solid #428bca; border-radius: 5px;">
+            <thead>
+            <tr>
+              <th class="text-center text-info" colspan="5" style="border: 1px solid #428bca">Paket</th>
+            </tr>
+            <tr class="text-center">
+              <th class="text-info" style="border: 1px solid #428bca">ID_PAKET</th>
+              <th class="text-info" style="border: 1px solid #428bca">IME_PAKET</th>
+              <th class="text-info" style="border: 1px solid #428bca">KATEGORIJA</th>
+              <th class="text-info" style="border: 1px solid #428bca">OPIS</th>
+              <th class="text-info" style="border: 1px solid #428bca">CENA</th>
+              <th class="text-info" style="border: 1px solid #428bca"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="text-center" *ngFor="let zapis of paket">
+              <td class="text-info" style="border: 1px solid #428bca">{{zapis.ID_PAKET}}</td>
+              <td class="text-info" style="border: 1px solid #428bca">{{zapis.ID_IME}}</td>
+              <td class="text-info" style="border: 1px solid #428bca">{{zapis.KATEGORIJA}}</td>
+              <td class="text-info" style="border: 1px solid #428bca">{{zapis.OPIS}}</td>
+              <td class="text-info" style="border: 1px solid #428bca">{{zapis.CENA}}</td>
+              <td class="text-info" style="border: 1px solid #428bca">
+                <button class="btn btn-outline-danger" (click)="obirsi_unos(zapis.ID_PAKET)">Obrisi unos</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>

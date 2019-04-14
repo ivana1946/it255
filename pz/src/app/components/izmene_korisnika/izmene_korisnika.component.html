@@ -1,0 +1,49 @@
+<div class="container mt-3 bg-warning p-3 " style="border-radius: 5px;">
+        <form role="form" [formGroup]="searchForm">
+          <div class="alert alert-danger" style="display: none;">
+          </div>
+          <div class="form-group">
+            <label for="searchUsername">Username:</label>
+            <input type="text" class="form-control" formControlName='searchUsername'>
+          </div>
+          <button (click)="pronadji_korisnika()" class="btn btn-default">Pronađi</button>
+        </form>
+      </div>
+      
+      
+      <div class="container mt-5">
+        <div class="container">
+          <h2 class="text-dark text-center">Ažuriranje korisnikovih podataka</h2>
+      
+      
+          <div class="container mt-3 bg-warning p-3 " style="border-radius: 5px;">
+            <form role="form" [formGroup]="updateForm">
+              <div class="alert alert-danger" style="display: none;">
+      
+              </div>
+              <div class="form-group">
+                <label for="ime">Ime: {{korisnik.ime}}</label>
+                <input type="text" class="form-control" formControlName='ime' required>
+              </div>
+      
+              <div class="form-group">
+                <label for="prezime">Prezime: {{korisnik.prezime}}</label>
+                <input type="text" class="form-control" formControlName='prezime' required>
+              </div>
+      
+              <div class="form-group">
+                <label for="noviUsername">Username: {{korisnik.username}}</label>
+                <input type="text" class="form-control" formControlName='noviUsername' required>
+              </div>
+      
+              <div class="form-group">
+                <label for="sifra">Šifra:</label>
+                <input type="password" class="form-control" formControlName='sifra' required>
+              </div>
+      
+              <button (click)="izmeni_korinsika()" class="btn btn-default">Izmeni</button>
+            </form>
+          </div>
+      
+        </div>
+      </div>

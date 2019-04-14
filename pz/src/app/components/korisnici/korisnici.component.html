@@ -1,0 +1,34 @@
+<div class="container mt-5">
+        <div class="container">
+          <h2 class="text-dark text-center">Korisnici Kablovskog Operatera</h2>
+          <table class="table" style="border: 1px solid #428bca; border-radius: 5px;">
+            <thead>
+            <tr>
+              <th class="text-center text-info" colspan="7" style="border: 1px solid #428bca">Svi korisnici</th>
+            </tr>
+            <tr class="text-center" style="border: 1px solid #428bca">
+              <th class="text-info" >ID</th>
+              <th class="text-info" >Ime</th>
+              <th class="text-info" >Prezime</th>
+              <th class="text-info" >Korisnicko ime</th>
+              <th class="text-info" >Lozinka</th>
+              <th class="text-info" >Token</th>
+              <th class="text-info" ></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="text-center" *ngFor="let korisnik of korisnici" style="border: 1px solid #428bca">
+              <td class="text-info" >{{korisnik.id}}</td>
+              <td class="text-info" >{{korisnik.ime}}</td>
+              <td class="text-info" >{{korisnik.prezime}}</td>
+              <td class="text-info" >{{korisnik.username}}</td>
+              <td class="text-info" >{{korisnik.sifra}}</td>
+              <td class="text-info" >{{korisnik.token}}</td>
+              <td class="text-info" >
+                <button class="btn btn-outline-danger" (click)="obrisi_korinsika(korisnik.id)">Obrisi korinsika</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>

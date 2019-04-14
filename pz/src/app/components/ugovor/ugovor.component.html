@@ -1,0 +1,18 @@
+<div class="container mt-3 bg-warning p-3 " style="border-radius: 5px;">
+
+        <form role="form" [formGroup]="ugovorForm">
+          <div class="alert alert-danger" style="display: none;"></div>
+      
+          <div class="form-group">
+            <label for="imePaketa">Ime paketa</label>
+            <input type="number" class="form-control" formControlName='imePaketa' required>
+          </div>
+      
+          <div class="form-group">
+            <label for="vremeDatumUnosa">Vreme i datum unosa</label>
+            <input type="datetime-local" class="form-control" formControlName='vremeDatumUnosa' required>
+          </div>
+      
+          <button (click)="ugovor()" class="btn btn-default">Unesi</button>
+        </form>
+      </div>
